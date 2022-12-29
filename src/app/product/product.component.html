@@ -1,0 +1,132 @@
+<!-- <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="..."> 
+     <div class="card-body">
+      <h5 class="card-title">{{productItem.name}}</h5>
+      <p class="card-text">{{productItem.description}}</p>
+      <p class="card-text">{{productItem.price}}</p>
+      <button (click)="countplus(productItem)">+</button>
+      <p>{{productItem.count}}</p>
+      <button (click)="countminus(productItem)">-</button>
+    
+      <a [routerLink]="['/products', productItem.id]">Go to Details</a>
+      <a [routerLink]="['/cart']">go to cart</a>
+    </div>
+  </div>  -->
+
+  <div class="product">
+        <!-- <div class="col-md-6 mt-6"> -->
+                <div class="card">
+                    <div class="image-box">
+                        <img src="{{productItem.img}}" alt="{{ productItem.name }}" style="width:100%"   [routerLink]="['/products', productItem.id]" >
+                    <!-- <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">  -->
+                    </div>
+                   <div class="text-box" >
+                    <h1>{{productItem.name}}</h1>
+                    <p class="price">{{productItem.price}}</p>
+                    <p>{{productItem.description}}</p>
+                    <label for="item-1-quantity">Quantity:</label>
+                    <!-- <select class="form-control" [ngModel]="selectedWorkout" (ngModelChange)="onChange($event)">
+                        <option *ngFor="#workout of workouts" [value]="workout.id">{{workout.name}}</option>
+                    </select> -->
+                    
+                    <select  type="select" name="item-1-quantity" id="item-1-quantity" [ngModel]="productItem.count" (ngModelChange)="onCountChange($event)">
+                        <option *ngFor="let number of [1,2,3,4,5]" [value]="number" (onChange)="reCalculate()">{{number}}</option>
+                      </select>
+                    <!-- <select type="select" name="item-1-quantity" id="item-1-quantity"  value="{{ productItem.count}}">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                    </select>  -->
+                    <br>
+                        <a [routerLink]="['/products', productItem.id]">Go to Details</a>
+                   
+                    <p><button (click)="countplus(productItem)">Add to Cart</button></p>
+                  </div>
+                </div>
+            <!-- </div> -->
+        </div>
+ 
+
+
+
+
+
+
+
+<!-- 
+  <div class="container d-flex justify-content-center mt-50 mb-50">
+            
+    <div class="row">
+       <div class="col-md-4 mt-2">
+            <div class="card">
+               <div class="card-body">
+                      <div class="card-img-actions">
+                           <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png" class="card-img img-fluid" width="96" height="350" alt="">
+                      </div>
+                          </div>
+                                <div class="card-body bg-light text-center">
+                                    <div class="mb-2">
+                                        <h6 class="font-weight-semibold mb-2">
+                                            {{productItem.name}}
+                                            <a href="#" class="text-default mb-2" data-abc="true">Toshiba Notebook with 500GB HDD & 8GB RAM</a>
+                                        </h6>
+
+                                        <a href="#" class="text-muted" data-abc="true">Laptops & Notebooks</a>
+                                    </div>
+
+                                    <h3 class="mb-0 font-weight-semibold">{{productItem.price}}</h3>
+
+                                    <div>
+                                       <i class="fa fa-star star"></i>
+                                       <i class="fa fa-star star"></i>
+                                       <i class="fa fa-star star"></i>
+                                       <i class="fa fa-star star"></i>
+                                    </div>
+
+                                    <div class="text-muted mb-3">34 reviews</div>
+                                    <a [routerLink]="['/products', productItem.id]">Go to Details</a>
+
+                                    <button type="button" class="btn bg-cart" (click)="countplus(productItem)"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
+                                  
+                   
+
+                                    
+                                </div>
+                            </div>
+       </div> 
+    </div>
+</div>  -->
+
+
+
+<!-- <section class="bg-light py-4 my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-3 text-primary">Bootstrap 5 Cards Gallery</h2>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card my-3">
+
+                    <img src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg" class="card-image-top" alt="thumbnail">
+
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="#" class="text-secondary">{{productItem.name}}</a></h3>
+                        <p class="card-text">{{productItem.description}} </p>
+                        <p class="price">{{productItem.price}}</p>
+                        <a [routerLink]="['/products', productItem.id]" class="btn btn-primary">Details</a> -->
+                        <!-- <p><button (click)="countplus(productItem)">Add to Cart</button></p> -->
+                        <!-- <button type="button" class="btn bg-cart" (click)="countplus(productItem)"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>  -->
